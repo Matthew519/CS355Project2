@@ -1,0 +1,81 @@
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      #nav {
+        line-height:30px;
+        background-color:lightyellow;
+        height:300px;
+        width:100px;
+        float:left;
+        padding:5px;
+      }
+      #section {
+        width:350px;
+        float:left;
+        padding:10px;
+        }
+    </style>
+  </head>
+  <body>
+
+  <div id = "nav">
+    <a href="/about">About</a>
+      <br />
+    <a href="/login">Login</a>
+      <br />
+    <a href="/rate">Write a Review</a>
+      <br />
+    <a href="/users/all">See Our Reviewers</a>
+  </div>
+  <div id = "section">
+
+
+  </div>
+  </body>
+</html>
+-->
+<% include ./partials/header.ejs %>
+<body>
+<style>
+    h1 {
+        background-color: lightskyblue;
+        color:black;
+        text-align: left;
+        padding:30px;
+    }
+
+    #nav {
+        line-height: 30px;
+        background-color: lightyellow;
+        height:250px;
+        width:200px;
+        float:left;
+        padding:55px;
+    }
+</style>
+<h1><%= title %></h1>
+
+
+
+<div id="nav">
+    <a href="/">Home</a><br />
+    <a href="/about">About</a><br />
+    <a href="/users/new">Signup</a><br />
+    <a href="/restaurants/search">Find a Restaurant</a><br />
+    <a href="/auth_required/">Rate a Restaurant</a><br />
+    <a href="/users/all">Customers</a><br />
+    <a href="/restaurants/all">All Restaurants</a><br />
+    <a href="/restaurants/top">Top Restaurants</a><br />
+    <a href="/restaurants/new">Add New Restaurant</a><br />
+</div>
+
+<div id="content">
+    <img src="http://rack.3.mshcdn.com/media/ZgkyMDEzLzA4LzA3L2NlL3Jlc3RhdXJhbnRjLmJlZmQ5LmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/9d857fd8/9fe/restaurant-comment-card.jpg" alt="Rating" style="width:700px;height:360px;">
+</div>
+
+<% if(typeof FirstName !== "undefined") { %><a href="/logout">Logout</a><% } %>
+<% include ./partials/footer.ejs %>

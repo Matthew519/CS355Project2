@@ -1,0 +1,14 @@
+<% include ../partials/header.ejs %>
+
+<% if(typeof message !== 'undefined') { %>
+<div><%= message %></div>
+<% } %>
+
+<form method="GET" action="/restaurants/results">
+    Search for Restaurant Reviews: <br/>
+    <br />
+    <input type="text" name="Name" id="Name"/>
+    <button id="Search">Search!</button>
+</form>
+<div id="message" style="display: none">This text is hidden!</div>
+<% include ../partials/footer.ejs %>

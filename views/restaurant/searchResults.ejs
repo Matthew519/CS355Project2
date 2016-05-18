@@ -1,0 +1,7 @@
+<% include ../partials/header.ejs %>
+<h1><%=rs[0].Name %></h1>
+<% for(var i=0; i < rs.length; i++) { %>
+Rating: <%=rs[i].Rating%><br />
+Comments: <%= rs[i].Comments%><br /><br />
+<% } %>
+<% include ../partials/footer.ejs %>

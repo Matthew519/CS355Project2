@@ -1,0 +1,26 @@
+<% if (typeof js_includes !== 'undefined') { %>
+<% for(var i=0; i < js_includes.length; i++) { %>
+<script src="<%= js_includes[i] %>"></script>
+<% }%>
+<% } %>
+
+<% include ../partials/header.ejs %>
+<% if(typeof CustomerID !== "undefined") { %>
+<input type="hidden" id="CustomerID" value="<%=CustomerID %>">
+<% } %>
+
+<h1>Rate a Restaurant</h1>
+<form method="POST" action="/auth_required/insert_rating">
+    Restaurant(s)<br />
+    <% for(var i=0; i < rs.length; i++) { %>
+        <input type="checkbox" name="RestaurantID" id="RestaurantID" value="<%= rs[i].RestaurantID%>"><%= rs[i].Name %> <br />
+    <% } %>
+    <br />
+    Rating(1-10): <input type="number" name="Rating" id="Rating"> <br />
+    <br />
+    Comments: <textarea name="Comments"></textarea><br />
+    <br />
+    <button id="addBtn">Add</button>
+</form>
+
+<% include ../partials/footer.ejs %>

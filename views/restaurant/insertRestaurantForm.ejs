@@ -1,0 +1,26 @@
+<% js_includes =[] %>
+<% include ../partials/header %>
+
+<h1>Add New Restaurant</h1>
+<form method="GET" action="/restaurants/restaurantInsert">
+    Name: <input type="text" name="Name" id="Name" /><br />
+    <br />
+    Cuisine: <input type="text" name="Cuisine" id="Cuisine"/><br />
+    <br />
+    Street: <input type="text" name="Street" id="Street"/><br/>
+    <br />
+    City: <input type="text" name="City" id="City"/><br/>
+    <br />
+    State: <input type="text" name="State" id="State"/><br />
+    <br />
+    Zip: <input type="text" name="Zip" id="Zip"/><br />
+    <br />
+    PhoneNumber: <input type="text" name="PhoneNumber" id="PhoneNumber"/><br />
+    <br />
+
+    <button id="Add">Add</button>
+</form>
+
+<div id="message" style="display:none">This Text is Hidden!</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,17 @@
+<% var js_includes = ['https://code.jquery.com/jquery-1.12.3.min.js', '/javascripts/signup_ajax.js']%>
+<% include ../partials/header.ejs %>
+
+<h1>Sign Up</h1>
+<% if(typeof msg !== "undefined") { %>
+<%= msg %>
+<% } %>
+<form>
+    <label for="FirstName">First Name:</label><input type="text" id="FirstName" name="FirstName" /><br />
+    <label for="LastName">Last Name:</label><input type="text" id="LastName" name="LastName" /><br />
+    <label for="Username">Username:</label><input type="text" id="Username" name="Username" /><br />
+    <label for="Email">Email:</label><input type="text" id="Email" name="Email" /><br />
+    <label for="Password">Password:</label><input type="password" id="Password" name="Password" /><br />
+    <button id="addBtn">Go!</button>
+</form>
+<div id="message" style="display:none">This Text is Hidden!</div>
+<% include ../partials/footer.ejs %>

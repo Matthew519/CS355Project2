@@ -1,0 +1,50 @@
+<html>
+<head>
+    <div id="header">
+    <title>Restaurant Raters</title>
+    </div>
+    <style>
+        header{
+            background-color: lightskyblue;
+            color:black;
+            text-align: left;
+        }
+        label {
+            width:75px;
+            display:inline-block;
+            margin-bottom:10px;
+        }
+
+    </style>
+
+
+<!--
+        <li><a href="/users/new/">Sign up</a></li>
+        <li><a href="/auth_required/">Rate a Restaurant</a><li />
+        <li><a href="/users/all">Our Customers</a><li />
+        <li><a href="/restaurants/all">All Restaurants</a><li />
+        <li><a href="/restaurants/top">View Top Restaurants</a><li />
+        <li><a href="/restaurants/new">Add New Restaurant</a><li />
+    </ul>
+-->
+    <% if (typeof js_includes !== 'undefined') { %>
+        <% for(var i=0; i < js_includes.length; i++) { %>
+            <script src="<%= js_includes[i] %>"></script>
+        <% }%>
+    <% } %>
+</head>
+<body>
+
+<div style="float:right;">
+    <% if(typeof FirstName !== "undefined") { %>
+    Welcome, <%= FirstName %>
+    <% } else { %>
+    <a href="/login">Login</a>
+    <% } %>
+</div>
+
+<!--
+<div id="header">
+    <h1>Restaurant Raters</h1>
+</div>
+-->

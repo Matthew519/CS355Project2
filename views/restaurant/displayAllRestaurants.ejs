@@ -1,0 +1,19 @@
+<% include ../partials/header.ejs %>
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Restaurants</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/restaurants/?RestaurantID=<%= rs[i].RestaurantID %>"> <%= rs[i].Name %> </a></td>
+
+        </tr>
+        <% } %>
+    </table>
+    </br>
+    <a href="/auth_required/">Rate a Restaurant</a>
+    <% } else { %>
+    No restaurants exist.
+    <% } %>
+</div>
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,23 @@
+<% include ../partials/header.ejs %>
+<% if(rs.length > 0) { %>
+Restaurant: <%= rs[0].Name %>
+<br /><br />
+Average Rating: <%= rs[0].AverageRating %>
+<br /><br />
+Cuisine: <%= rs[0].Cuisine %>
+<br /><br />
+Restaurant Information:
+<ul>
+    <% for(var i=0; i < rs.length; i++) {%>
+    <li><%= rs[i].Street %>, <%= rs[i].City%>, <%= rs[i].State%> <%= rs[i].Zip%></li>
+    <%= rs[i].PhoneNumber%><br />
+    <%= rs[i].Services%>
+    <br /><br />
+    <% } %>
+</ul>
+<br />
+
+<% } else { %>
+No restaurant matched restaurant id <%= RestaurantID %>.
+<% } %>
+<% include ../partials/footer.ejs %>

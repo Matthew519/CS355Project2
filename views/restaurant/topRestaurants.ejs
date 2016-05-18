@@ -1,0 +1,15 @@
+<% include ../partials/header.ejs %>
+
+<% if(typeof message !== 'undefined') { %>
+<div><%= message %></div>
+<% } %>
+
+<form method="GET" action="/restaurants/ratings">
+    Find Restaurants with an average rating above: <br />
+    <input type="number" name="Number" id="Number"/>
+
+    <button id="Search">Search!</button>
+</form>
+<div id="message" style="display: none">This text is hidden!</div>
+<% include ../partials/footer.ejs %>
+

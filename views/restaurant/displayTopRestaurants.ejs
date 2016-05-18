@@ -1,0 +1,6 @@
+<% include ../partials/header.ejs %>
+<h1>Top Restaurants with an Average Rating above <%=Num%>!</h1>
+<% for(var i=0; i < rs.length; i++) { %>
+    <%=rs[i].Name %>:    <%=rs[i].AverageRating%><br />
+<% } %>
+<% include ../partials/footer.ejs %>

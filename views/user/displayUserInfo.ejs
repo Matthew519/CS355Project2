@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+<div>
+    <% if(rs.length > 0) { %>
+    Rated Restaurants: <br />
+    <br />
+    <% for(var i=0; i < rs.length; i++) { %>
+        <%= rs[i].Name%>:
+        <%= rs[i].Rating%><br />
+    <% } %>
+    <% } else { %>
+    No customer matches <%=CustomerID%>
+    <% } %>
+</div>
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Customers</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/users/?CustomerID=<%= rs[i].CustomerID %>"> <%= rs[i].FirstName %> </a></td>
+            <td><a href="/users/?CustomerID=<%= rs[i].CustomerID %>"> <%= rs[i].LastName %> </a></td>
+
+        </tr>
+        <% } %>
+    </table>
+    </br>
+
+    <% } else { %>
+    No customers exist.
+    <% } %>
+</div>
+<% include ../partials/footer.ejs %>
